@@ -1,0 +1,48 @@
+// See https://aka.ms/new-console-template for more information
+
+using System.Transactions;
+
+    int opcao = 2;
+
+while (opcao != 0)
+{
+    Console.WriteLine("Segue as opções abaixo");
+    Console.WriteLine("0 - Encerrar o programa");
+    Console.WriteLine("1 - Somar dois números");
+    Console.WriteLine("2 - Transformar metros em milímetros");
+    Console.WriteLine("Digite a sua opção: ");
+
+    opcao = int.Parse(Console.ReadLine());
+
+    switch (opcao)
+    {
+        case 0:
+            Console.WriteLine("Encerrando o programa... ");
+            break;
+
+        case 1:
+            Console.WriteLine("Digite o primeiro número: ");
+            int num1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo número: ");
+            int num2 = int.Parse(Console.ReadLine());
+
+            int resultado = num1 + num2;
+            Console.WriteLine($"A soma de {num1} e {num2} é igual a {resultado}");
+            break;
+
+        case 2:
+            Console.WriteLine("Digite a quantidade de metros: ");
+            double metros = double.Parse(Console.ReadLine());
+
+            double milimetros = metros * 1000;
+            Console.WriteLine($"{metros} em milimetros é igual a {milimetros}");
+            break;
+
+        default:
+            Console.WriteLine("Opção invalida, tente novamente: ");
+            break;
+
+    }
+
+}
